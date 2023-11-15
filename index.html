@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="ser.css">
+    <title>LOCAL SERVICES</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <button class="return"><a href="home.html"><i class='bx bx-arrow-back'></i></a></button>
+            <a href="#vet">VETERINARY</a>
+            <a href="#store">PET-STORE</a>
+            <a href="#gro">GROOMERS</a>
+            <a href="#"><i class='bx bxs-cart-alt'></i></a>
+            <div class="user-circle" onclick="toggleDropdown()">
+                <img src="paw.jpg" alt="User Image">
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="sigin.html">Sign In</a>
+                    <!link this to signin form>
+                        <a href="#">Logout</a>
+                        <a href="index.html">BACK</a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <div class="background">
+        <div class="background2">
+            <img class="i1" src="bottom_wave.png" alt="">
+        </div>
+    </div>
+    <div class="section1">
+        <div class="loc">
+            <h2>Select your location</h2>
+            <label for="country">Select Country:</label>
+            <select id="country" onchange="populateStates()">
+                <option value="India">India</option>
+            </select>
+
+            <label for="state">Select State:</label>
+            <select id="state" onchange="populateCities()">
+                <option value="Karnataka">Karnataka</option>
+                <option value="OtherState">Other State</option>
+            </select>
+
+            <label for="city">Select City:</label>
+            <select id="city" onchange="populateAreas()">
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Mysuru">Mysuru</option>
+            </select>
+
+            <label for="area">Select Area:</label>
+            <select id="area">
+                <option value="Hebbal">Hebbal</option>
+                <option value="Mysuru">Mandimohola</option>
+            </select>
+        </div>
+        <h1 id="vet" class="head">VETERINARY CENTRES</h1>
+        <div class="vet-info">
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="service1.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">RMV MULTI-SPECIALITY VETERINARY CLINIC</h1>
+                        <h2 class="ma1">3 KM Away</h2>
+                        <p class="desc">No. 318, 2nd cross, 2nd Main Rd, R.M.V. 2nd Stage, Bengaluru, Karnataka 560094
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="service 2.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">Cessna Lifeline Veterinary Hospital, Sadashiva Nagar</h1>
+                        <h2 class="ma1">7 KM Away</h2>
+                        <p class="desc">No. 237, Ground floor, Dr CV Raman Road, RMV extension, Sadashiva Nagar,
+                            Bengaluru, 560080</p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="service3.avif" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">THE PAWS PET CLINIC</h1>
+                        <h2 class="ma1">8 KM Away</h2>
+                        <p class="desc">445, 5th Main Rd, HIG Colony, Dollars Colony, R.M.V. 2nd Stage, Bengaluru,
+                            Karnataka 560094
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="service4.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">Veterinary Hospital HEBBAL</h1>
+                        <h2 class="ma1">10 KM Away</h2>
+                        <p class="desc">232, 7th cross Bellary Rd, opposite to CBI , Sanjayanagara, hebbal Bengaluru,
+                            Karnataka 560024
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="store" class="head">PET STORES</h1>
+        <div class="vet-info">
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="store1.webp" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">Harley's Pet world</h1>
+                        <h2 class="ma1">6 KM Away</h2>
+                        <p class="desc">Gundappa road, rmv extension, near Bhadrappa layout, opposite to Sneha clinic,
+                            R.M.V. 2nd Stage, Bengaluru 560094
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="store2.jpeg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">HARSHITHA PET STORE</h1>
+                        <h2 class="ma1">12 KM Away</h2>
+                        <p class="desc">#6 Mathruchaya 80ft, Double Rd, near Rmv club, R.M.V. 2nd Stage, Bengaluru,
+                            Karnataka 560094</p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="store3.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">The Pet Project</h1>
+                        <h2 class="ma1">3 KM Away</h2>
+                        <p class="desc">No. 8, 80 Feet, Tank Bund Rd, Dollars Colony, R.M.V. 2nd Stage, Bengaluru,
+                            Karnataka 560094
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="store4.webp" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">TR pets valley</h1>
+                        <h2 class="ma1">1.9 KM Away</h2>
+                        <p class="desc">2nd main road opp mathekere main bus stop, Bengaluru, Karnataka 560054
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <h1 id="gro" class="head">PET GROOMERS</h1>
+        <div class="vet-info">
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="gr1.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">Maruthi Pet Grooming Centre</h1>
+                        <h2 class="ma1">1 KM Away</h2>
+                        <p class="desc">Dr Rajgopal Rd, Ashwath Nagar, Sanjayanagara, Bengaluru, Karnataka 560006
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="g2.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">Pawz and Care</h1>
+                        <h2 class="ma1">7 KM Away</h2>
+                        <p class="desc">6 Mathruchaya, 80ft Double Rd, near Rmv club, Dollars Colony, R.M.V. 2nd Stage,
+                            Bengaluru, Karnataka 560094/p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="gr3.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">Petwise grooming home service</h1>
+                        <h2 class="ma1">9 KM Away</h2>
+                        <p class="desc">3rd B Cross Rd, Jakkur Layout, Amrutahalli, Byatarayanapura, Bengaluru,
+                            Karnataka 560064
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="images">
+                    <img class="inpic" src="gr4.jpg" />
+                    <p class="pick">shortcut</p>
+                    <div class="sizes">
+                        <div class="size"><i class="fa-solid fa-phone"></i></div>
+                        <div class="size"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="size"><i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="product">
+                        <h1 class="ma">AB's Happy Paws</h1>
+                        <h2 class="ma1">11 KM Away</h2>
+                        <p class="desc">12th Block, 64 10th cross, main, Railway Parallel Rd, Kumarapark West,
+                            Seshadripuram, Bengaluru, Karnataka 560020
+                        </p>
+                        <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></p>
+                        <div class="buttons">
+                            <button class="add">Visit</button>
+                            <button class="like"><span><i class="fa-solid fa-heart"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>we as tiny paw wishes your pet happiness and well-being</p>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Your Website. All rights reserved.</p>
+            </div>
+            <button id="scrollToTopBtn" onclick="scrollToTop()">&#9650;</button>
+        </footer>
+        </footer>
+        <script src="ser.js"></script>
+</body>
+
+</html>
